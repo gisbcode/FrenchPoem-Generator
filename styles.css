@@ -7,10 +7,14 @@ h1 {
     text-align: center;
     font-family: 'Arial Black', Gadget, sans-serif;
 }
-p {
+footer {
     color: white;
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 18px;
+
+    font-size: 20px;
     line-height: 1.6;
     margin: 20px;
+}
+
+a { 
+    color:blue;
 }
