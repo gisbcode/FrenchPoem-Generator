@@ -1,0 +1,16 @@
+body {
+    background-color: rgb(223, 146, 242);
+}
+
+h1 {
+    color: white;
+    text-align: center;
+    font-family: 'Arial Black', Gadget, sans-serif;
+}
+p {
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 18px;
+    line-height: 1.6;
+    margin: 20px;
+}
