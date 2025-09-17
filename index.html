@@ -7,24 +7,28 @@
     <title>AI Poem Generator</title>
   </head>
   <body>
+    <div class="container"> 
+    <h1>The AI French Poem Genarator</h1>
 
-    <h1>Welcome to the AI French Poem Genarator</h1>
+    <main>
+      <form id="poem-form" class="form">
+        <input
+          placeholder="Enter a theme for your poem"
+          type="text"
+          id="theme"
+          name="theme"
+          required
+          autocomplete="off"
+        />
+        <button type="submit">Generate Poem</button>
+      </form>
 
-<main>
+      <div id="poem-container">
+        <h2>Your Generated Poem:</h2>
+      </div>
+    </main>
 
-    <form id="poem-form">
-      <label for="theme">Enter a theme for your poem:</label>
-      <input type="text" id="theme" name="theme" required autocomplete="off"/>
-      <button type="submit">Generate Poem</button>
-    </form>
-
-    <div id="poem-container">
-      <h2>Your Generated Poem:</h2>
-    
-    </div>
-</main>
-
-    <footer>
+    <footer class="footer">
       This was coded by Giovanna Bellon and is
       <a href="https://github.com/gisbcode/FrenchPoem-Generator"
         >open-souced on GitHub</a
@@ -32,6 +36,7 @@
       and is hosted on
       <a href="https://aipoemgeneratorbygi.netlify.app/">Netlify</a>
     </footer>
+    </div>
     <script src="index.js"></script>
   </body>
 </html>
