@@ -1,5 +1,5 @@
 body {
-  background-color: rgb(223, 146, 242);
+  background-color: rgb(161, 202, 236);
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
@@ -16,7 +16,7 @@ h2 {
   margin: 0 0 20px 0;
   text-align: center;
   font-family: "Arial Black", Gadget, sans-serif;
-  color: purple;
+  color: rgb(51, 0, 128);
 }
 
 footer {
@@ -28,18 +28,18 @@ footer {
 }
 
 a {
-  color: purple;
+  color: rgb(51, 0, 128);
 }
 
 .poem-container {
   background-color: white;
   border-radius: 3px;
-  padding: 30px;
+  padding: 200px;
   margin: 30px auto;
   max-width: 800px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border-left: 3px solid purple;
-  text-align: center;
+  border-left: 3px solid rgb(51, 0, 128);
+  text-align: left;
   display: none; /* hidden by default */
 }
 
@@ -48,26 +48,26 @@ a {
   text-align: left;
   margin: 0;
   line-height: 1.6;
- 
 }
 
 .form {
-  text-align: center;
+  text-align: left;
   margin: 20px 0;
 }
 
 input[type="text"] {
   padding: 10px 15px;
-  border: 2px solid purple;
-  border-radius: 5px;
-  font-size: 16px;
+  border: rgb(51, 0, 128);
+  border-radius: 7px;
+  font-size: 18px;
   width: 300px;
   margin-right: 10px;
 }
 
 button {
   padding: 10px 20px;
-  background-color: purple;
+  background-color: rgb(51, 0, 128);
+
   color: white;
   border: none;
   border-radius: 5px;
@@ -78,6 +78,6 @@ button {
 .container {
   max-width: 800px;
   padding: 20px;
-  margin: auto;
+  margin: 0px auto;
+  text-align: left;
 }
-

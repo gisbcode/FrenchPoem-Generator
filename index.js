@@ -1,16 +1,14 @@
+function showAdvice(response) {
+  console.log("advice generated", response);
 
-
-function showPoem(response) {
-  console.log("poem generated", response);
-
-  let poemElement = document.getElementById("poem-text");
-  poemElement.innerHTML = ""; // clear old poem
+  let adviceElement = document.getElementById("advice-text");
+  adviceElement.innerHTML = ""; // clear old poem
 
   let lines = response.data.answer
     .split("\n")
     .filter((line) => line.trim() !== "");
 
-  let typewriter = new Typewriter(poemElement, {
+  let typewriter = new Typewriter(adviceElementElement, {
     autoStart: true,
     cursor: "",
     delay: 50,
@@ -27,31 +25,30 @@ function showPoem(response) {
   typewriter.start();
 }
 
-
-function generatePoem(event) {
+function generateAdvice(event) {
   event.preventDefault();
   let instructionsInput = document.querySelector("#instructions-input");
   let apiKey = "39a3014fd34afe90bc14c4tc7oed280d";
-  let prompt = `Generate a French poem about ${instructionsInput.value}`;
+  let prompt = `Generate a travel advise for ${instructionsInput.value}`;
   let context =
-    "You are a romantic poem expert, and love writing short poems. Your mission is to generate a 4 line poem in French. Do not erase the lines, write exactly 4 lines one by one.";
+    "You are a travel guide. You provide detailed and engaging travel advice for various destinations around the world. Your advice includes must-see attractions, local culture, cuisine recommendations, and travel tips to help travelers make the most of their visit.";
 
   let apiURL = `https://api.shecodes.io/ai/v1/generate?prompt=${encodeURIComponent(
     prompt
   )}&context=${encodeURIComponent(context)}&key=${apiKey}`;
 
-  let poemContainer = document.getElementById("poem-container");
-  let poemElement = document.getElementById("poem-text");
+  let adviceContainer = document.getElementById("travel-container");
+  let adviceElement = document.getElementById("travel-text");
 
-  poemContainer.style.display = "block";
-  poemElement.innerHTML = `Generating a French poem about <em>${instructionsInput.value}</em>...`;
+  adviceContainer.style.display = "block";
+  adviceElement.innerHTML = `Generating travel advice for the country <em>${instructionsInput.value}</em>...`;
 
-  console.log("Generating poem with the following parameters:");
+  console.log("Generating travel advice with the following parameters:");
   console.log(`Prompt: ${prompt}`);
   console.log(`Context: ${context}`);
 
-  axios.get(apiURL).then(showPoem);
+  axios.get(apiURL).then(showAdvice);
 }
 
-let poemFormElement = document.getElementById("poem-form");
-poemFormElement.addEventListener("submit", generatePoem);
+let poemFormElement = document.getElementById("advice-form");
+poemFormElement.addEventListener("submit", generateAdvice);
